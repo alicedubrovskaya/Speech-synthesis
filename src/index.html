@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Web Speech Api examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+     
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/searcherStyle.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+
+
+
+
+    <header>
+        <a style="color: #1f98ff;" ">
+            
+            Voice synthesis
+			<img style="min-width: 100px" src="images/icon.svg"/>
+        </a>
+    </header>
+
+  <section>
+   
+    <p>
+      Enter the text and press 'play' button to listen a recorder. You can choose any voice from list below. 
+    </p>
+    <form>
+	<select style="max-width: 500px;font-family: cursive; background-color: #f2e9ff;">
+      </select>
+	  <br>
+        <div class="values-box" style="  margin-left: 600px;  flex-direction: row;display: flex;">
+          <div class="value-box">
+            <div>Rate</div>
+            <div class="value value--rate-value">1</div>
+			          <input class="ranges-box" type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+
+          </div>
+          <div class="value-box">
+            <div>Range</div>
+            <div class="value value--pitch-value">1</div>
+			          <input class="ranges-box" type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+
+          </div>
+          <div class="value-box">
+            <div>Volume</div>
+            <div class="value value--volume-value">0.5</div>
+			          <input class="ranges-box" type="range" min="0" max="1" value="0.5" step="0.1" id="volume">
+
+          </div>
+        </div>
+		<br>
+
+      <textarea class="text" style="font-family: -webkit-pictograph;font-size: x-large; text-align: center; margin-right: 100px; margin-left: 100px; max-height: 250px;" rows="10" placeholder="Enter your thoughts =)"></textarea>
+      
+	   
+      <div class="row" style="margin-left: 600px;">
+	  <input type="image" id="pause"
+       src="images/pause.svg" style="max-width:80px; margin-right: 10px;"/>
+        <input type="image" id="play"
+       src="images/play.svg" style="max-width:80px; margin-right: 10px;"/>
+	    <input type="image" id="resume"
+       src="images/stop.svg" style="max-width:80px; margin-right: 10px;"/>
+		      </div>
+	  
+
+
+      </div>
+
+     
+      
+    </form>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
